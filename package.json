@@ -1,0 +1,23 @@
+{
+  "name": "Public-Vote",
+  "version": "1.0.0",
+  "description": "Dapp to allow anyone to create a vote/poll by which people vote through donating ether.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Heph789/Public-Vote.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Heph789/Public-Vote/issues"
+  },
+  "homepage": "https://github.com/Heph789/Public-Vote#readme",
+  "devDependencies": {
+    "truffle": "^4.1.11"
+  }
+}
