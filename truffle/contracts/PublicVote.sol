@@ -25,7 +25,7 @@ contract PublicVote {
         votes[nameOfVote].candidates[index] = item;
     }
 
-    function vote(bytes30 name, uint8 candidateIndex) public payable {
+    function voteFor(bytes30 name, uint8 candidateIndex) public payable {
         votes[name].amount[candidateIndex] = msg.value;
     }
 
@@ -33,8 +33,13 @@ contract PublicVote {
       return votes[nameOfVote].candidates.length;
     }*/
 
-    //for testing purposes only
+    /*
+      **FUNCTIONS FOR TESTING PURPOSES**
+    */
     function getCandidates(bytes30 nameOfVote, uint8 index) public view returns (bytes15) {
       return votes[nameOfVote].candidates[index];
+    }
+    function getAmounts(bytes30 nameOfVote, uint8 index) public view returns (uint256) {
+      return votes[nameOfVote].amount[index];
     }
 }

@@ -13,7 +13,7 @@ contract('PublicVote', function(accounts) {
     var proces;
 
     before(() => {
-      var proces = PublicVote.deployed().then(function(pv) {
+      proces = PublicVote.deployed().then(function(pv) {
         vote = pv;
         vote.establishVote(name, 3, {from: owner});
       });
@@ -21,8 +21,7 @@ contract('PublicVote', function(accounts) {
 
     it('should establish a vote setting owner to the parameter', () => {
 
-      return proces
-      .then(function() {
+      return proces.then(function() {
         return vote.votes.call(name);
       })
       .then(function(struct) {
@@ -93,6 +92,29 @@ contract('PublicVote', function(accounts) {
   });
 
   describe('Voting', () => {
+    const name = "Vote";
+    var vote;
+    var proces;
+    const candidateIndex = 0;
+
+    before(() => {
+      proces = PublicVote.deployed().then((pv) => {
+        vote = pv;
+        vote.establishVote(name, 3, {from: accounts[0]});
+      });
+    });
+
+    it('Should vote with the correct amount of wei sent', () => {
+      const amount = 10000;
+      return proces.then(async () => {
+        const itemName = "itemName";
+        await vote.addItem(name, itemName, candidateIndex, {from: accounts[0]});
+        await vote.voteFor(name, candidateIndex, {value: amount});
+        const amountReceived = await vote.getAmounts.call(name, candidateIndex);
+        assert.equal(amount, amountReceived);
+      });
+
+    });
 
   });
 
