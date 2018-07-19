@@ -1,0 +1,27 @@
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="index.css">
+  <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="./js/app.js"></script>
+</head>
+
+<body>
+  <div id="sidebar">
+    <div id="createVoteContainer">
+      <div class="createVote sidePart button centerText" id="cVText">Create Vote</div>
+      <div class="createVote hide form sidePart centerText" id="cVForm">
+        <input type="text" name="Name" placeholder="Name of vote..."></input><br>
+        <input type="text" name="numOfCans" placeholder="Number of candidates..."></input><br>
+        <button type="button" class="button cVButton" id="create">Create</button><br>
+        <button type="button" class="button cVButton" id="cancel">Cancel</button>
+      </div>
+    </div>
+    <div id="addVoteContainer">
+      <div class="sidePart centerText button" id="addVote">Add Vote</div>
+
+    </div>
+    <div class="centerText" id="Votes"><div class="ballot button sidePart">example</div></div>
+  </div>
+</body>

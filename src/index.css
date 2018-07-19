@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: none;
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0 30px #e83638 inset;
+}
+
+.button {
+  cursor: pointer;
+}
+
+.centerText {
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
+
+#sidebar {
+  width: 300px;
+  height: 100%;
+  border-right: 1px solid gray;
+  box-shadow: 2px 0px 5px gray;
+  display: table;
+  overflow: hidden;
+}
+
+.sidePart {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  font-size: 30px;
+}
+
+.createVote {
+  /*reddish color*/
+  background-color: #ff4b4d;
+  margin-bottom: 1px;
+}
+
+#cVText:hover {
+  background-color: #dc2729;
+  transition: .3s;
+}
+
+#cVForm {
+  font-size: 18px;
+}
+
+#cVForm input {
+  margin-bottom: 10px;
+  border: none;
+  border-bottom: 2px solid white;
+  background-color: inherit;
+  color: white;
+}
+#cVForm input::placeholder {
+  /*light blue-ish gray*/
+  color: #cbd1d8;
+  font-style: italic;
+}
+#cVForm input:focus {
+  transition: .5s;
+  outline: none;
+  background-color: #e83638;
+}
+
+.cVButton {
+  /*reddish color*/
+  background-color: #ff4b4d;
+  border: none;
+  color: white;
+}
+.cVButton:hover {
+  transition: .5s;
+  /*darker red*/
+  background-color: #e83638;
+}
+
+#Votes {
+  background-color: #273a54;
+  height: 100%;
+  padding-top: 3px;
+  overflow: auto;
+}
+
+#addVote {
+  /*blue gray-ish color*/
+  background-color: #456b9e;
+}
+
+.ballot {
+  margin-bottom: 1px;
+  font-size: 25px;
+}
+.ballot:hover {
+  transition: .5s;
+  background-color: #3e516b;
+}
